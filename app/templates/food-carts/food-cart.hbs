@@ -1,1 +1,9 @@
 <h3>{{model.name}}</h3>
+<h6>{{model.cuisine}}</h6>
+
+<!-- {{#each review in model}}
+
+{{/each}} -->
+{{#link-to 'food-carts.food-cart.reviews.new'}}View reviews{{/link-to}}
+
+{{outlet}}
