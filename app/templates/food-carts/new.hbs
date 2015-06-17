@@ -1,0 +1,11 @@
+<form>
+  <div class="form-group">
+    <label for="name">Cart Name</label>
+    {{input id="name" class="form-control" value=name}}
+  </div>
+  <div class="form-group">
+    <label for="cuisine">Cuisine</label>
+    {{input id="cuisine" class="form-control" value=cuisine}}
+  </div>
+  <button class="btn btn-sm btn-info"{{action 'add'}}>Add Cart</button>
+</form>

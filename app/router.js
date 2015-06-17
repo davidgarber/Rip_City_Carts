@@ -6,6 +6,11 @@ var Router = Ember.Router.extend({
 });
 
 Router.map(function() {
+  this.resource('food-carts', {path: '/'}, function() {
+    this.route('food-cart', {path: ':cart_id'});
+    this.route('new');
+  });
+  this.route('about');
 });
 
 export default Router;

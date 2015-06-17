@@ -1,0 +1,17 @@
+As a reviewer {
+  - add carts DONE
+    - cuisine type DONE
+    - price
+    - address
+  - add comments
+  - rate (1-5 Stars)
+  -
+}
+
+As a reader {
+  - see all carts available
+  - see top 10 rated carts
+  - see which carts have the most comments
+  - filter carts by:
+    - location
+}

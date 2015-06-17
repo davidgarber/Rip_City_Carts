@@ -1,0 +1,21 @@
+<div>
+  {{#link-to 'food-carts.new'}}Add New Cart{{/link-to}}
+</div>
+
+
+<hr>
+
+<div class="food-cart-content">
+  {{#each food-cart in model}}
+    <div class="each-msg">
+    <!-- {{food-cart.name}}: {{food-cart.cuisine}} -->
+
+      {{#link-to 'food-carts.food-cart' food-cart.id}}{{food-cart.name}}{{/link-to}}: {{food-cart.cuisine}}
+    </div>
+  {{/each}}
+</div>
+
+
+<div class="container">
+  {{outlet}}
+</div>
