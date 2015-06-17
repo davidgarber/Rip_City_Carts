@@ -2,8 +2,16 @@
 <h6>{{model.cuisine}}</h6>
 
 <!-- {{#each review in model}}
-
 {{/each}} -->
-{{#link-to 'food-carts.food-cart.reviews.new'}}View reviews{{/link-to}}
+
+{{#link-to 'food-carts.food-cart.reviews.new'}}Add a review{{/link-to}}
 
 {{outlet}}
+
+<!-- {{#each review in model}}
+<ul>
+  {{#link-to 'food-carts.food-cart.reviews'}}
+  {{food-carts.food-cart.reviews}}
+  {{/link-to}}
+ </ul>
+{{/each}} -->

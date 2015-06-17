@@ -11,6 +11,14 @@
   <button class="btn btn-sm btn-primary"{{action 'submit'}}>Submit review</button>
 
 </form -->
-{{#link-to 'food-carts.food-cart.reviews.new'}}New Review{{/link-to}}
+<!-- {{#link-to 'food-carts.food-cart.reviews.new'}}New Review{{/link-to}} -->
 
 {{outlet}}
+
+{{#each review in model}}
+<ul>
+  <!-- {{#link-to 'food-carts.food-cart.reviews'}} -->
+  {{food-carts.reviews}}
+  <!-- {{/link-to}} -->
+</ul>
+{{/each}}
