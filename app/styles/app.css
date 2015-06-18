@@ -11,6 +11,7 @@ form {
   color: white;
 }
 
+
 #title {
   color: #FFF;
 }
@@ -32,4 +33,13 @@ form {
 #cart-button {
   background-color: #E21342;
   border-color: #E21342;
+}
+
+hr {
+  /*display: block;*/
+   height: 1px;
+   /*border: 0;
+   border-top: 3px solid #000;
+   /*margin: 1em 0;
+   padding: 0;*/
 }
