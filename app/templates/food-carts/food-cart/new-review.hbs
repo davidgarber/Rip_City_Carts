@@ -7,5 +7,18 @@
     <label for="text">Review</label>
     {{textarea id="text" class="form-control" value=text}}
   </div>
-  <button class="btn btn-sm btn-primary"{{action 'submit'}}>Submit review</button>
+  <div class="form-group">
+    <label for="rating">Rating</label>
+    <!-- {{select id="rating" class="form-control" value=rating}} -->
+    {{view Ember.Select
+      content=selectContentType
+      optionValuePath="content.value"
+      optionLabelPath="content.label"
+      selectionBinding=selectedContentType}}
+
+
+
+
+  </div>
+  <button class="btn btn-sm btn-primary" id="cart-button"{{action 'submit'}}>Submit review</button>
 </form>

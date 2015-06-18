@@ -5,3 +5,31 @@ body {
 form {
   width: 300px;
 }
+
+.navbar {
+  background-color: #CE153F;
+  color: white;
+}
+
+#title {
+  color: #FFF;
+}
+
+
+#links a {
+  color: #FFF;
+}
+
+.food-cart-content a {
+  color: #DB5876;
+}
+
+.food-cart-content a:hover {
+  text-decoration: none;
+  color: #6D6B6B;
+}
+
+#cart-button {
+  background-color: #E21342;
+  border-color: #E21342;
+}

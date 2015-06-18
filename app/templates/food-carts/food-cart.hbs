@@ -9,9 +9,10 @@
 {{#link-to 'food-carts.food-cart.new-review' model}}Add a review{{/link-to}}
 
 {{outlet}}
-
+<hr>
 {{#each review in model.reviews}}
 <ul>
-  {{review.text}}
+  <p>{{review.user}} says:</p>
+  <p>{{review.text}}</p>
 </ul>
 {{/each}}
