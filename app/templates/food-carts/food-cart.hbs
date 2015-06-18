@@ -1,18 +1,15 @@
 <h3>{{model.name}}</h3>
+<h4>Rating: {{model.avgRating}} stars</h4>
 <h6>{{model.cuisine}}</h6>
-
-<!-- {{#each review in model}}
-{{/each}} -->
-
-
 
 {{#link-to 'food-carts.food-cart.new-review' model}}Add a review{{/link-to}}
 
 {{outlet}}
 <hr>
+<div class="container">
 {{#each review in model.reviews}}
-<ul>
-  <p>{{review.user}} says:</p>
+  <h4>{{review.user}} says: {{review.rating}} Stars</h4>
+
   <p>{{review.text}}</p>
-</ul>
 {{/each}}
+</div>

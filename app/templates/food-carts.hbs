@@ -7,9 +7,8 @@
 <div class="food-cart-content">
   {{#each food-cart in model}}
     <div class="each-msg">
-    <!-- {{food-cart.name}}: {{food-cart.cuisine}} -->
-
-      {{#link-to 'food-carts.food-cart' food-cart.id}}{{food-cart.name}}{{/link-to}}: {{food-cart.cuisine}}
+      {{#link-to 'food-carts.food-cart' food-cart.id}}{{food-cart.name}}{{/link-to}}
+      <p>{{food-cart.cuisine}}</p>
     </div>
   {{/each}}
 </div>

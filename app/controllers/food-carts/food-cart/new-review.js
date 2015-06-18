@@ -21,6 +21,7 @@ export default Ember.Controller.extend({
     {label: "1", value: 1}
   ],
   actions: {
+
     submit: function() {
       var newReview = this.store.createRecord('review', {
         user: this.get('user'),
@@ -28,10 +29,19 @@ export default Ember.Controller.extend({
         rating: this.get('selectedContentType.value')
       });
       var cart = this.get('controllers.food-carts/food-cart.model');
+      var allRatings = cart.get('reviews').forEach(function(review) {return review.get('ratings')});
       newReview.save().then(function() {
         cart.get('reviews').pushObject(newReview);
         cart.save();
       });
+
+      var sum = parseInt(this.get('selectedContentType.value'));
+      allRatings.forEach(function(rating) {
+        sum += parseInt(rating.get('rating'));
+      });
+
+      var avgRating = sum/(parseInt(allRatings.get('length'))+1);
+      cart.set('avgRating', avgRating).save();
 
       this.setProperties({
         user: '',
