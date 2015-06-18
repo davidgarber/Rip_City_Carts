@@ -4,14 +4,14 @@
 <!-- {{#each review in model}}
 {{/each}} -->
 
-{{#link-to 'food-carts.food-cart.reviews.new'}}Add a review{{/link-to}}
+
+
+{{#link-to 'food-carts.food-cart.new-review' model}}Add a review{{/link-to}}
 
 {{outlet}}
 
-<!-- {{#each review in model}}
+{{#each review in model.reviews}}
 <ul>
-  {{#link-to 'food-carts.food-cart.reviews'}}
-  {{food-carts.food-cart.reviews}}
-  {{/link-to}}
- </ul>
-{{/each}} -->
+  {{review.text}}
+</ul>
+{{/each}}

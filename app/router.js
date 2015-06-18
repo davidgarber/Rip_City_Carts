@@ -8,9 +8,7 @@ var Router = Ember.Router.extend({
 Router.map(function() {
   this.resource('food-carts', {path: '/'}, function() {
     this.route('food-cart', {path: 'food-cart/:cart_id'}, function() {
-      this.route('reviews', function() {
-        this.route('new');
-      });
+      this.route('new-review');
     });
     this.route('new');
   });
