@@ -43,9 +43,15 @@ export default Ember.Controller.extend({
       var avgRating = sum/(parseInt(allRatings.get('length'))+1);
       cart.set('avgRating', avgRating).save();
 
+      newReview.save().then(function() {
+        cart.get('reviews').pushObject(review);
+        cart.save();
+      })
+
       this.setProperties({
         user: '',
-        text: ''
+        text: '',
+        rating: this.get('selectedContentType.value')
       });
 
       this.transitionToRoute('food-carts.food-cart', cart);
